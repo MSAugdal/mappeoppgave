@@ -7,11 +7,13 @@ import turtle
 def kube():
     # lager et område for turtle å rendere #
     # lager tittel til vinduet
-    # setter bakgrunnsfarge til grønn og pennfarge til svart
-    # lager variabler "turt" for å kalle turtle med kortere navn
+    # setter bakgrunnsfarge til grønn
     vindu = turtle.Screen()
     vindu.bgcolor("green")
     vindu.title("3D KUBE")
+
+    # setter pennfarge til svart
+    # lager variabler "turt" for å kalle turtle med kortere navn
     turt = turtle.Turtle()
     turt.color("black")
 
@@ -32,7 +34,7 @@ def kube():
     turt.goto(150, 50)
     turt.goto(100, 0)
 
-    # lager linje i øvers høyre hjørne som kobler de to firkantene sammen
+    # lager linje i øverst høyre hjørne som kobler de to firkantene sammen
     turt.goto(100, 100)
     turt.goto(150, 150)
 
@@ -45,4 +47,5 @@ def kube():
     turtle.done()
 
 
-kube()
+if __name__ == "__main__":
+    kube()
