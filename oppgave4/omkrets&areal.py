@@ -3,6 +3,8 @@ from time import sleep
 
 
 class OmkretsOgAreal:
+    # printer en velkomstbeskjed og hvordan man bruker programmet
+    # lager en variabel for verdien av Pi
     def __init__(self):
         print("\nVelkommen til utregningsprogrammet!")
         sleep(2)
@@ -15,6 +17,9 @@ class OmkretsOgAreal:
 
         self.PI = 3.14
 
+    # lar bruker velge geometrisk objekt å regne ut enten volum, areal eller overflate
+    # caller modulene til geomtetrisk objekt utifra hvilket nummer som ble skrevet av bruker
+    # printer error om bruker-svar ikke er gyldig
     def velgObjekt(self):
         print('''
 	1: Sirkel (areal, omkrets)
@@ -46,15 +51,19 @@ class OmkretsOgAreal:
             print("du må skrive enten 1, 2 eller 3...\n")
             self.velgObjekt()
 
+    # modul for å regne ut areal og omkrets av sirkel
     def sirkel(self):
+        # lagrer radius i r
         try:
             r = float(input('\nSkriv inn radius av sirkelen: '))
 
+        # printer error om svar ikke er gyldig
         except Exception as ex:
             print(ex)
             print("du må skrive et tall...\n")
             self.sirkel()
 
+        # regner ut og printer areal og omkrets om svar er gyldig
         else:
             sleep(2)
             areal = round(self.PI * r * r, 2)
@@ -64,15 +73,19 @@ class OmkretsOgAreal:
             print(f"Omkrets av sirkel = {omkrets}\n")
             sleep(2)
 
+    # regner ut overflate og volum av kule
     def kule(self):
+        # lagrer radius i r
         try:
             r = float(input('\nSkriv inn radius av kulen: '))
 
+        # printer error om svar ikke er gyldig
         except Exception as ex:
             print(ex)
             print("du må skrive et tall...\n")
             self.kule()
 
+        # regner ut og printer volum  og overflate om svar er gyldig
         else:
             sleep(2)
             overflate = round(4 * self.PI * r * r, 2)
@@ -82,16 +95,20 @@ class OmkretsOgAreal:
             print(f"Volum av kule: {volum}\n")
             sleep(2)
 
+    # regner ut volum og overflate av sylinder
     def sylinder(self):
+        # lagrer radius i r og hødye i h
         try:
             r = float(input('\nSkriv inn radius av sylinderet: '))
             h = float(input("skriv inn høyde av sylinderet: "))
 
+        # printer error om svar ikke er gyldig
         except Exception as ex:
             print(ex)
             print("du må skrive et tall...\n")
             self.sylinder()
 
+        # regner ut og printer overflate og volum om svar er gyldig
         else:
             sleep(2)
             overflate = round(2*self.PI * r**2 + (2*self.PI * r * h))
@@ -101,6 +118,9 @@ class OmkretsOgAreal:
             print(f"Volum av sylinder: {volum}\n")
             sleep(2)
 
+    # starter ny utregning om bruker svarer Y
+    # avslutter program om bruker svarer N
+    # printer error om svar er noe annet
     def startPåNytt(self):
         svar = input("\nVil du gjøre en ny utregning? [Y][N]\n>>").upper()
 
@@ -118,12 +138,14 @@ class OmkretsOgAreal:
             print("\ndu må skrive enten Y eller N...\n")
             self.startPåNytt()
 
+    # starter programmet i en loop som fortsetter til bruker svarer N i startPåNytt
     def run(self):
         while True:
             self.velgObjekt()
             self.startPåNytt()
 
 
+# starter programmet om det ikke er importert
 if __name__ == "__main__":
     prog = OmkretsOgAreal()
     prog.run()
