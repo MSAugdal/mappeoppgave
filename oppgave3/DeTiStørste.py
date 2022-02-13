@@ -11,7 +11,7 @@ class DeTiStørste():
         # og en shufflet versjon av listen som vises til spilleren
         self.gjett = 0
         self.nummerIlista = 0
-        self.deTiStørste = ["RUSSIA", "CANADA", "USA", "CHINA", "BRAZIL",
+        self.deTiStørste = ["RUSSLAND", "CANADA", "USA", "KINA", "BRASIL",
                             "AUSTRALIA", "INDIA", "ARGENTINA", "KAZAKHSTAN", "ALGERIA"]
         self.shufflet = sample(self.deTiStørste, len(self.deTiStørste))
 
