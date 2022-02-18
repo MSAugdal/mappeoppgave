@@ -15,7 +15,9 @@ class NavnTegner():
 
         # lager nytt variabel navn for turtle
         # endrer pennfargen til hvit
+        # endrer pensize til 5
         self.turt = turtle.Turtle()
+        self.turt.pensize(5)
         self.turt.color("white")
 
     # funksjon som tegner en M
@@ -197,7 +199,7 @@ class NavnTegner():
         self.s()
         turtle.done()
 
-
+# starter programmet om den ikke er importert
 if __name__ == "__main__":
     navn = NavnTegner()
     navn.run()
