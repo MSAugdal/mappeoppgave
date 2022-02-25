@@ -1,7 +1,15 @@
 from turtle import *
 import turtle
 
-
+''' 
+i denne oppgaven bruker jeg class og def fordi jeg vil at den skal kunne være mer funksjonell.
+det gjør det også da mulig å gjøre selve bokstavmodulene "usynlig" så du ikke med et uhell caller
+en bokstav til å bli tegnet. dette gjør jeg ikke i denne oppgaven fordi jeg mener det gjør det unødvendig komplisert.
+med denne metoden kan du også lage en __init__ def som laget variabler du skal bruke i resten av classen,
+men det er ikke mulig å kalle den utenfor, og du slepper å lage globale variabler (som er dårlig programmeringsskikk).
+du kan også da ha en def/modul som caller alle bokstavene i den rekkefølgen du vil ha dem. ergo: mer funksjonell.
+om du vil skrive "amthias", eller "aaaaa" istedenfor "mathias" er dette mulig ve å omrokkere i "run" modulen.
+'''
 class NavnTegner():
     def __init__(self):
         # lager vinduet for å tegne i

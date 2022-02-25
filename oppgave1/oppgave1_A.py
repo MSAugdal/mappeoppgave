@@ -1,9 +1,11 @@
-
 from turtle import *
-
 import turtle
 
-
+'''
+i denne oppgaven lager jeg kuben ved hjelp av en funksjon fordi jeg vil at det skal være mer oversiktlig,
+fordi du kan lese navnet på funskjonen og forstår med en gang hva den gjør, siden selve filen heter "oppgave1_A"
+og forteller ingenting om hva programmet gjør.
+'''
 def kube():
     # lager et område for turtle å rendere #
     # lager tittel til vinduet
@@ -46,6 +48,6 @@ def kube():
     # gjør akkurat det samme som tkinter.mainloop()
     turtle.done()
 
-
+# starter programmet om funsksjonen ikke er importert
 if __name__ == "__main__":
     kube()

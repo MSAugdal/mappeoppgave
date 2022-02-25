@@ -1,6 +1,9 @@
 import csv
 
-
+'''
+i denne oppgaven bruker jeg class og def (moduler) for samme grunn som i oppgave 1_B.
+det gjør koden mer oversiktlig siden programmet er relativt stort og "tungtlest".
+'''
 class Grunderen():
     def __init__(self):
         # printer en beskjed som forklarer regler for kjøp, rabatter og prisen på vare
