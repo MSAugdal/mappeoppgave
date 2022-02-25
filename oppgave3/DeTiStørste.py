@@ -1,14 +1,16 @@
-
 from random import sample
 from time import sleep
 
-
+'''
+i denne oppgaven bruker jeg også class og def (moduler) for samme grunn som i oppgave1_A.
+programmet er ikke så stort men det gjør det mer oversiktlig når du skal lese igjennom koden.
+'''
 class DeTiStørste():
+    # her lages variabler for å lagre antall gjett,
+    # hvor langt inn i listen spilleren er kommet,
+    # en liste over de ti største landene fra størst til minst
+    # og en shufflet versjon av listen som vises til spilleren
     def __init__(self):
-        # her lages variabler for å lagre antall gjett,
-        # hvor langt inn i listen spilleren er kommet,
-        # en liste over de ti største landene fra størst til minst
-        # og en shufflet versjon av listen som vises til spilleren
         self.gjett = 0
         self.nummerIlista = 0
         self.deTiStørste = ["RUSSLAND", "CANADA", "USA", "KINA", "BRASIL",
