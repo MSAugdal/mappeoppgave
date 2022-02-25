@@ -1,7 +1,9 @@
-
 from time import sleep
 
-
+'''
+i denne oppgaven bruker jeg også class og def (moduler) for samme grunn som i oppgave1_A.
+programmet er ikke så stort men det gjør det mer oversiktlig når du skal lese igjennom koden.
+'''
 class OmkretsOgAreal:
     # printer en velkomstbeskjed og hvordan man bruker programmet
     # lager en variabel for verdien av Pi
